@@ -1,0 +1,2 @@
+# piedrapapeltijera
+Ejercicio JavaScript
