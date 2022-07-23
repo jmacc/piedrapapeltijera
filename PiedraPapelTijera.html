@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Piedra, Papel o Tijera</title>
+
+    <script>
+
+        //let jugador = 0
+        //let pc = 1
+        //let pc = Math.floor(Math.random() * 3) + 1
+        // ✂️ ✊ 📄
+do{
+    var usuario = prompt("Bienveni8do. Escoja su arma: \n(1) <-✊-> Piedra  \n(2) <-📄-> Papel  \n(3) <-✂️-> Tijera \n(0) <--> Salir");
+    var eleccionPC = Math.floor(Math.random() * (3 - 1) + 1);   
+
+    if (usuario == 1 && eleccionPC == 1)
+    alert("Piedra vs Piedra - Empate");
+    else if (usuario == 2 && eleccionPC == 2 )
+    alert("Papel vs Pape - Empate");
+    else if (usuario == 3 && eleccionPC == 3 )
+    alert("Tijera vs Tijera - Empate");
+    //Gana PC
+    else if (usuario == 1 && eleccionPC == 3)
+    alert("Papel vs Tijera - Gana PC");
+    else if (usuario == 1 && eleccionPC == 2)
+    alert("Piedra vs Papel - Gana PC");
+    else if (usuario == 3 && eleccionPC == 1)
+    alert("Tijera vs Piedra - Gana PC");
+    //Gana Jugador
+    if (usuario == 1 && eleccionPC == 3)
+    alert("Piedra vs Tijera - Gana Jugador");
+    if (usuario == 2 && eleccionPC == 3)
+    alert("Papel vs Piedra - Gana Jugador");
+    if (usuario == 3 && eleccionPC == 2)
+    alert("Tijera vs Papel- Gana Jugador");
+        } while(usuario != 0);
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
