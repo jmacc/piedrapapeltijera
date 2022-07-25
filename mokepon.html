@@ -1,39 +1,63 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <title>MOKEPON!</title>
-    </head>
-    <body>
-        <h1>MOKEPON! 🔥💧🌱</h1>
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8" />
+            <title>MOKEPON!</title>
+            <script src="js/mokepon.js"
+        </head>
+        <body>
+            <h1>MOKEPON! 🔥💧🌱</h1>
 
-        <section id="seleccionar-mascota">
-            <h2>Elige tu mascota:</h2>
+            <section id="seleccionar-mascota">
 
-            MASCOTAS
+                <h2>Elige tu mascota:</h2>
+                <label for="Hipoge">Hipoge</label>
+                <input type="radio" name="mascota" id="Hipoge" >
 
-            <button>Seleccionar</button>
-        </section>
+                <label for="Capipepo">Capipepo</label>
+                <input type="radio" name="mascota" id="Capipepo">
 
-        <section id="seleccionar-ataque">
-            <h2>Elige tu ataque:</h2>
+                <label for="Ratigueya">Ratigueya</label>
+                <input type="radio" name="mascota" id="Ratigueya">
 
-            <p>Tu mascota tiene <span>3</span> vidas</p>
-            <p>Las mascota del enemigo tiene <span>3</span> vidas</p>
+                <label for="Langostelvis">Langostelvis</label>
+                <input type="radio" name="mascota" id="Langostelvis">
 
-            <p>
-                <button>Fuego 🔥</button>
-                <button>Agua 💧</button>
-                <button>Tierra 🌱</button>
-            </p>
-        </section>
+                <label for="Tucapalma">Tucapalma</label>
+                <input type="radio" name="mascota" id="Tucapalma">
 
-        <section id="mensajes">
-            <p>Tu mascota atacó con FUEGO, las mascota del enemigo atacó con TIERRA - GANASTE 🎉</p>
-        </section>
+                <label for="Pydos">Pydos</label>
+                <input type="radio" name="mascota" id="Pydos">
+            <!--
+                Hipoge -> Agua
+                Capipepo -> Fuego
+                Ratigueya -> Tierra
+                Langostelvis -> Agua y FUEGO
+                Tucapalma -> Agua y Tierra
+                Pydos -> Tierra y Fuego
+-->
+               <button>Seleccionar</button>
+            </section>
 
-        <section id="reiniciar">
-            <button>Reiniciar</button>
-        </section>
-    </body>
-</html>
+            <section id="seleccionar-ataque">
+                <h2>Elige tu ataque:</h2>
+
+                <p>Tu mascota tiene <span>3</span> vidas</p>
+                <p>Las mascota del enemigo tiene <span>3</span> vidas</p>
+
+                <p>
+                    <button>Fuego 🔥</button>
+                    <button>Agua 💧</button>
+                    <button>Tierra 🌱</button>
+                </p>
+            </section>
+
+            <section id="mensajes">
+                <p>Tu mascota atacó con FUEGO, las mascota del enemigo atacó con TIERRA - GANASTE 🎉</p>
+            </section>
+
+            <section id="reiniciar">
+                <button>Reiniciar</button>
+            </section>
+        </body>
+    </html>
