@@ -3,7 +3,7 @@
         <head>
             <meta charset="utf-8" />
             <title>MOKEPON!</title>
-            <script src="js/mokepon.js"
+            <script src="js/mokepon.js"></script>
         </head>
         <body>
             <h1>MOKEPON! 🔥💧🌱</h1>
@@ -28,15 +28,8 @@
 
                 <label for="Pydos">Pydos</label>
                 <input type="radio" name="mascota" id="Pydos">
-            <!--
-                Hipoge -> Agua
-                Capipepo -> Fuego
-                Ratigueya -> Tierra
-                Langostelvis -> Agua y FUEGO
-                Tucapalma -> Agua y Tierra
-                Pydos -> Tierra y Fuego
--->
-               <button>Seleccionar</button>
+
+               <button id="boton-mascota">Seleccionar</button>
             </section>
 
             <section id="seleccionar-ataque">
@@ -46,9 +39,9 @@
                 <p>Las mascota del enemigo tiene <span>3</span> vidas</p>
 
                 <p>
-                    <button>Fuego 🔥</button>
-                    <button>Agua 💧</button>
-                    <button>Tierra 🌱</button>
+                    <button id="Fuego">Fuego 🔥</button>
+                    <button id="Agua">Agua 💧</button>
+                    <button id="Tierra">Tierra 🌱</button>
                 </p>
             </section>
 
@@ -57,7 +50,7 @@
             </section>
 
             <section id="reiniciar">
-                <button>Reiniciar</button>
+                <button id="reiniciar">Reiniciar</button>
             </section>
         </body>
     </html>
