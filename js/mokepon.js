@@ -1,6 +1,18 @@
+//variable global
+let ataqueJugador
+
 function iniciarJuego() {
     let botonMascotaJugador = document.getElementById('boton-mascota')
     botonMascotaJugador.addEventListener('click', seleccionarMascotaJugador)
+
+    let botonFuego = document.getElementById('boton-Fuego')
+    boton.addEventListener('click', ataqueFuego)
+
+    let botonAgua = document.getElementById('boton-Agua')
+    boton.addEventListener('click', ataqueAgua)
+
+    let botonTierra = document.getElementById('boton-Tierra')
+    boton.addEventListener('click', ataqueTierra)
 }
 
 function seleccionarMascotaJugador() {
@@ -12,9 +24,9 @@ function seleccionarMascotaJugador() {
     let inputPydos = document.getElementById('Pydos')
     let spanMascotaJuagador = document.getElementById('mascota-jugador')
     
-
     if (inputHipoge.checked) {
-       // alert('Seleccionaste Hipoge')
+        //cambiamos los datos del html con los datos que introducimos
+       // alert('Seleccionaste Hipoge') 
        spanMascotaJuagador.innerHTML = 'Hipoge'
     } else if (inputCapipepo.checked) {
        // alert('Seleccionaste Capipepo')
@@ -59,4 +71,15 @@ function aleatorio(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
+function ataqueFuego(){
+    ataqueJugador = 'Fuego'
+}
+
+function ataqueAgua(){
+    ataqueJugador = 'Agua'
+}
+
+function ataqueTierra(){
+    ataqueJugador = 'Tierra'
+}
 window.addEventListener('load', iniciarJuego)
