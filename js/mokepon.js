@@ -5,6 +5,9 @@ let vidasJugador = 3
 let vidasEnemigo = 3
 
 function iniciarJuego() {
+    let seccionSeleccionAtaque = document.getElementById('seleccionar-ataque').style.display = 'none'
+    let seccionReinicionar = document.getElementById('sec-reiniciar').style.display = 'none'
+
     let botonMascotaJugador = document.getElementById('boton-mascota')
     botonMascotaJugador.addEventListener('click', seleccionarMascotaJugador)
 
@@ -20,6 +23,11 @@ function iniciarJuego() {
     let botonReinicar = document.getElementById('boton-reiniciar')
     botonReinicar.addEventListener('click', reiniciarJuego)
 }
+
+/**
+ * document.getElementById(id).style.visibility = "visible"; // show
+document.getElementById(id).style.visibility = "hidden"; // hide
+ */
 
 function seleccionarMascotaJugador() {
     let inputHipoge = document.getElementById('Hipoge')
