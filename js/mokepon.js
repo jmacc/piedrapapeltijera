@@ -25,8 +25,7 @@ function iniciarJuego() {
 }
 
 function seleccionarMascotaJugador() {
-    
-
+    let seccionSeleccionMascota = document.getElementById('seleccionar-mascota').style.display = 'none'
     let inputHipoge = document.getElementById('Hipoge')
     let inputCapipepo = document.getElementById('Capipepo')
     let inputRatihueya = document.getElementById('Ratigueya')
