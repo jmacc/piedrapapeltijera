@@ -1,6 +1,8 @@
 //variable global
 let ataqueJugador
 let ataqueEnemigo
+let vidasJugador = 3
+let vidasEnemigo = 3
 
 function iniciarJuego() {
     let botonMascotaJugador = document.getElementById('boton-mascota')
@@ -104,19 +106,39 @@ function ataqueAlatorioEnemigo() {
 }
 
 function combate(){
+    let spanVidasJugador = document.getElementById('vidas-jugador')
+    let spanVidasEnemigo = document.getElementById('vidas-enemigo')
+
     // COMBATE
     if (ataqueEnemigo == ataqueJugador) {
        crearMensaje("EMPATE")
       } else if (ataqueEnemigo == 'FUEGO' && ataqueJugador == 'TIERRA') {
         crearMensaje("GANASTE")
+        vidasEnemigo--
+        spanVidasEnemigo.innerHTML = vidasEnemigo
      } else if (ataqueEnemigo == 'AGUA' && ataqueJugador == 'TIERRA') {
         crearMensaje("GANASTE")
+        vidasEnemigo--
+        spanVidasEnemigo.innerHTML = vidasEnemigo
       } else if (ataqueEnemigo == 'TIERRA' && pataqueJugador == 'AGUA') {
         crearMensaje("GANASTE")
+        vidasEnemigo--
+        spanVidasEnemigo.innerHTML =vidasEnemigo
       } else {
         crearMensaje("PERDISTE")
+        vidasJugador--
+        spanVidasJugador.innerHTML = vidasJugador
       
       }
+      revisarVidas()
+}
+
+function revisarVidas(){
+    if (vidasEnemigo == 0){
+crearFinal(" Felicidades GANASTE EL COMBATE ")
+    } else if(vidasJugador == 0){
+crearFinal(" PERDISTE EN OTRA OCASION SERA ")
+    }
 }
 
 function crearMensaje(resultado) {
@@ -124,6 +146,14 @@ function crearMensaje(resultado) {
 
     let parrafo = document.createElement('p')
     parrafo.innerHTML = 'Tu mascota atacó con ' + ataqueJugador + ', las mascota del enemigo atacó con ' + ataqueEnemigo + '-' + resultado
+    sectionMensajes.appendChild(parrafo)
+}
+
+function crearFinal(resultadoFinal) {
+    let sectionMensajes = document.getElementById('mensajes')
+
+    let parrafo = document.createElement('p')
+    parrafo.innerHTML = resultadoFinal
     sectionMensajes.appendChild(parrafo)
 }
 
