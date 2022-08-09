@@ -24,12 +24,9 @@ function iniciarJuego() {
     botonReinicar.addEventListener('click', reiniciarJuego)
 }
 
-/**
- * document.getElementById(id).style.visibility = "visible"; // show
-document.getElementById(id).style.visibility = "hidden"; // hide
- */
-
 function seleccionarMascotaJugador() {
+    
+
     let inputHipoge = document.getElementById('Hipoge')
     let inputCapipepo = document.getElementById('Capipepo')
     let inputRatihueya = document.getElementById('Ratigueya')
@@ -41,6 +38,7 @@ function seleccionarMascotaJugador() {
     if (inputHipoge.checked) {
         //cambiamos los datos del html con los datos que introducimos
         // alert('Seleccionaste Hipoge') 
+        
         spanMascotaJuagador.innerHTML = 'Hipoge'
     } else if (inputCapipepo.checked) {
         // alert('Seleccionaste Capipepo')
@@ -60,7 +58,8 @@ function seleccionarMascotaJugador() {
     } else {
         alert('Selecciona una mascota')
     }
-
+    let seccionSeleccionAtaque = document.getElementById('seleccionar-ataque').style.display = 'block'
+  
     seleccionarMascotaEnemigo()
 }
 
@@ -175,6 +174,8 @@ function crearFinal(resultadoFinal) {
 
     let botonTierra = document.getElementById('boton-Tierra')
     botonTierra.disabled = true
+
+    let seccionReinicionar = document.getElementById('sec-reiniciar').style.display = 'block'
 }
 
 function reiniciarJuego(){
