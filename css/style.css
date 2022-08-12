@@ -1,0 +1,17 @@
+.titulo {
+    color: blue;
+    width: 310px;
+    height: 50px;
+    background-color: beige;
+}
+
+button{
+    background-color: rgb(81, 223, 88);   
+}
+
+#seleccionar-mascota {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
