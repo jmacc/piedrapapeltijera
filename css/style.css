@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Silkscreen:wght@700&display=swap');
 
 body{
     font-family: 'Abril Fatface', cursive;
@@ -25,10 +25,13 @@ font-size: 30px;
 }
 
 #seleccionar-mascota {
-    display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 10px;
+  border-style: double;
+  border-color: rgb(216, 8, 18);
 }
 
 .tarjetas{
@@ -71,6 +74,15 @@ input {
 
   button{
     background-color: rgb(81, 223, 88);   
+}
+
+#boton-mascota{
+width: 180px;
+height: 40px;
+border-radius: 20px;
+border: 2px solid;
+margin-top: 30px;
+font-family: 'Silkscreen', cursive;
 }
 
 #sec-reiniciar{
