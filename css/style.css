@@ -61,11 +61,11 @@ font-size: 30px;
     flex-direction:row;
     justify-content:center;
     align-items: center;
-    background-color: aqua;
     height: 250px;
     border-radius: 10px;
     border-style: double;
     border-color: rgb(216, 8, 18);
+    background-color: rgb(226, 125, 9);
 }
 
 input {
