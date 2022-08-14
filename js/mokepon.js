@@ -57,7 +57,7 @@ function seleccionarMascotaJugador() {
     } else {
         alert('Selecciona una mascota')
     }
-    let seccionSeleccionAtaque = document.getElementById('seleccionar-ataque').style.display = 'block'
+    let seccionSeleccionAtaque = document.getElementById('seleccionar-ataque').style.display = 'flex'
   
     seleccionarMascotaEnemigo()
 }
