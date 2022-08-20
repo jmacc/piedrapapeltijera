@@ -144,9 +144,9 @@ function combate(){
 
 function revisarVidas(){
     if (vidasEnemigo == 0){
-crearFinal(" Felicidades GANASTE EL COMBATE ")
+crearFinal(" Felicidades Ganaste Esta Ronda ")
     } else if(vidasJugador == 0){
-crearFinal(" PERDISTE EN OTRA OCASION SERA ")
+crearFinal(" Perdiste Esta Ronda ")
     }
 }
 
