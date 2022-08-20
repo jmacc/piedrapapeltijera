@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Silkscreen:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Chakra+Petch&family=Silkscreen:wght@700&display=swap');
 
 body {
     font-family: 'Abril Fatface', cursive;
@@ -117,9 +117,21 @@ button {
     border-radius: 20px;
     display: flex;
     align-items: center;
-    flex-direction: column;
+    flex-direction:column;
   }
   
+  .cajaMensajes{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  #nameAtaque{
+font: 50px;
+font-family: 'Chakra Petch', sans-serif;
+  }
 
 #boton-reiniciar {
     width: 180px;
@@ -134,6 +146,10 @@ button {
     display: grid;
     grid-template-columns: 100px 100px;
     color:brown;
+  }
+
+  .nameAtaques{
+    font-size: large;
   }
   
   #vidas-jugador, #vidas-enemigo {

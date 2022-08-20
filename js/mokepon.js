@@ -153,8 +153,9 @@ crearFinal(" Perdiste Esta Ronda ")
 function crearMensaje(resultado) {
     let sectionMensajes = document.getElementById('mensajes')
 
-    let parrafo = document.createElement('p')
-    parrafo.innerHTML = 'Tu mascota atacó con ' + ataqueJugador + ', las mascota del enemigo atacó con ' + ataqueEnemigo + '-' + resultado
+    let parrafo = document.createElement('div')
+    parrafo.innerHTML = '<div class="cajaMensajes"> Tu mascota atacó con <p id="nameAtaque">'+ ataqueJugador +',</p> las mascota del enemigo atacó con <p id="nameAtaque">' + ataqueEnemigo + 
+    '</p> Resultado: <p id="nameAtaque"> '+ resultado +'</p>  </div>'
     sectionMensajes.appendChild(parrafo)
 }
 
