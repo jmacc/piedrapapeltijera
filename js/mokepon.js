@@ -26,6 +26,8 @@ function iniciarJuego() {
 
 function seleccionarMascotaJugador() {
     let seccionSeleccionMascota = document.getElementById('seleccionar-mascota').style.display = 'none'
+    let seccionSeleccionAtaque = document.getElementById('seleccionar-ataque').style.display = 'flex'
+
     let inputHipoge = document.getElementById('Hipoge')
     let inputCapipepo = document.getElementById('Capipepo')
     let inputRatihueya = document.getElementById('Ratigueya')
@@ -57,8 +59,7 @@ function seleccionarMascotaJugador() {
     } else {
         alert('Selecciona una mascota')
     }
-    let seccionSeleccionAtaque = document.getElementById('seleccionar-ataque').style.display = 'flex'
-  
+    
     seleccionarMascotaEnemigo()
 }
 
@@ -121,20 +122,30 @@ function combate(){
     // COMBATE
     if (ataqueEnemigo == ataqueJugador) {
        crearMensaje("EMPATE")
+       crearMensajeAtaquesJugador()
+       crearMensajeAtaqueEnemigo()
       } else if (ataqueEnemigo == 'FUEGO' && ataqueJugador == 'TIERRA') {
         crearMensaje("GANASTE")
+        crearMensajeAtaquesJugador()
+        crearMensajeAtaqueEnemigo()
         vidasEnemigo--
         spanVidasEnemigo.innerHTML = vidasEnemigo
      } else if (ataqueEnemigo == 'AGUA' && ataqueJugador == 'TIERRA') {
         crearMensaje("GANASTE")
+        crearMensajeAtaquesJugador()
+        crearMensajeAtaqueEnemigo()
         vidasEnemigo--
         spanVidasEnemigo.innerHTML = vidasEnemigo
       } else if (ataqueEnemigo == 'TIERRA' && pataqueJugador == 'AGUA') {
         crearMensaje("GANASTE")
+        crearMensajeAtaquesJugador()
+        crearMensajeAtaqueEnemigo()
         vidasEnemigo--
         spanVidasEnemigo.innerHTML =vidasEnemigo
       } else {
         crearMensaje("PERDISTE")
+        crearMensajeAtaquesJugador()
+        crearMensajeAtaqueEnemigo()
         vidasJugador--
         spanVidasJugador.innerHTML = vidasJugador
       
@@ -150,6 +161,8 @@ crearFinal(" Perdiste Esta Ronda ")
     }
 }
 
+/***** todo el resultado en un solo bloque  **/
+/**
 function crearMensaje(resultado) {
     let sectionMensajes = document.getElementById('mensajes')
 
@@ -157,6 +170,33 @@ function crearMensaje(resultado) {
     parrafo.innerHTML = '<div class="cajaMensajes"> Tu mascota atacó con <p id="nameAtaque">'+ ataqueJugador +',</p> las mascota del enemigo atacó con <p id="nameAtaque">' + ataqueEnemigo + 
     '</p> Resultado: <p id="nameAtaque"> '+ resultado +'</p>  </div>'
     sectionMensajes.appendChild(parrafo)
+}
+**/
+
+/** el resultado seccionado */
+
+function crearMensaje(resultado){
+    let sectionMensajes = document.getElementById('mensajes')
+    let parrafo = document.createElement('div')
+
+    parrafo.innerHTML = resultado
+    sectionMensajes.appendChild(parrafo)
+}
+
+function crearMensajeAtaquesJugador(){
+    let resultadoJugador = document.getElementById('resultado-jugador')
+    let parrafo = document.createElement('div')
+
+    parrafo.innerHTML = ataqueJugador
+    resultadoJugador.appendChild(parrafo)
+}
+
+function crearMensajeAtaqueEnemigo(){
+    let resultadoEnemigo = document.getElementById('resultado-enemigo')
+    let parrafo = document.createElement('div')
+    
+   parrafo.innerHTML = ataqueEnemigo
+   resultadoEnemigo.appendChild(parrafo)
 }
 
 function crearFinal(resultadoFinal) {
