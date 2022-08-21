@@ -67,10 +67,10 @@ body {
     box-shadow: 0 0 0 2px white, 0 0 0 4px rgb(20, 172, 83);
 } */
 
-input[type="radio"]:checked+label { box-shadow: 0 0 0 2px white, 0 0 0 4px rgb(20, 172, 83); }
+ input[type="radio"]:checked + label { box-shadow: 0 0 0 2px white, 0 0 0 4px rgb(235, 70, 5); }
 
 input {
-    display: none;
+    display:none;
 }
 
 button {
