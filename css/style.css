@@ -109,6 +109,15 @@ button {
   font-size: large;
 }
 
+.boton-de-ataque:active {
+  background-color: gold;
+  transition: 0.07s;
+}
+
+.boton-de-ataque:disabled {
+  background-color: gray;
+}
+
 #mensajes {
     width: 280px;
     background-image: radial-gradient(circle at -18.3% 31.7%, #fffef7 0, #fdf9ef 7.14%, #fbf4e7 14.29%, #f9edde 21.43%, #f7e6d4 28.57%, #f5ddca 35.71%, #f4d4bf 42.86%, #f2c9b5 50%, #f0beac 57.14%, #efb4a5 64.29%, #edaba1 71.43%, #eba29f 78.57%, #e99a9f 85.71%, #e694a0 92.86%, #e38ea3 100%);
