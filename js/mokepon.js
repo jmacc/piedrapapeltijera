@@ -59,7 +59,7 @@ function seleccionarMascotaJugador() {
     } else {
         alert('Selecciona una mascota')
     }
-    
+
     seleccionarMascotaEnemigo()
 }
 
@@ -187,7 +187,7 @@ function crearMensajeAtaquesJugador(){
     let resultadoJugador = document.getElementById('resultado-jugador')
     let parrafo = document.createElement('div')
 
-    parrafo.innerHTML = ataqueJugador
+    parrafo.innerHTML = '<div class="losAtaques">'+ ataqueJugador
     resultadoJugador.appendChild(parrafo)
 }
 
@@ -195,7 +195,7 @@ function crearMensajeAtaqueEnemigo(){
     let resultadoEnemigo = document.getElementById('resultado-enemigo')
     let parrafo = document.createElement('div')
     
-   parrafo.innerHTML = ataqueEnemigo
+   parrafo.innerHTML = '<div class="losAtaques">'+ ataqueEnemigo
    resultadoEnemigo.appendChild(parrafo)
 }
 
