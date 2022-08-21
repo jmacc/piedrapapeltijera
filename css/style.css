@@ -197,3 +197,11 @@ font-family: 'Chakra Petch', sans-serif;
     color: brown;
     font-family: 'Josefin Slab', serif;
   }
+
+  @media (max-width:420px) {
+    .tarjetas, .tipos-ataques {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
