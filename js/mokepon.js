@@ -1,4 +1,11 @@
-//variable global
+/**
+ * @autor jmacc <tianalytics.com.mx>
+ */
+
+/**
+ * vidas  son llamadas por las funciones
+ * @global {string} vidas de los jugadores
+ */
 let ataqueJugador
 let ataqueEnemigo
 let vidasJugador = 3
@@ -23,8 +30,11 @@ function iniciarJuego() {
     let botonReinicar = document.getElementById('boton-reiniciar')
     botonReinicar.addEventListener('click', reiniciarJuego)
 }
-
+/**
+ * Mostramos el menu para seleccion de Mascotas
+ */
 function seleccionarMascotaJugador() {
+    /**  */
     let seccionSeleccionMascota = document.getElementById('seleccionar-mascota').style.display = 'none'
     let seccionSeleccionAtaque = document.getElementById('seleccionar-ataque').style.display = 'flex'
 
@@ -80,10 +90,19 @@ function seleccionarMascotaEnemigo() {
     }
 }
 
+/**
+ * 
+ * @param {number} min Minimo 1
+ * @param {number} max Maximo 5
+ * @returns 
+ */
 function aleatorio(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
-
+/**
+ * El jugador elige su ataque y de manera aleatoria el enemigo genera su ataque
+ * para las funciones fuego, agua y tierra
+ */
 function ataqueFuego() {
 
     ataqueJugador = 'FUEGO'
@@ -101,6 +120,9 @@ function ataqueTierra() {
     ataqueAlatorioEnemigo()
 }
 
+/**
+ * Nos permite tener un elemento aleatorio dentro de un rango
+ */
 function ataqueAlatorioEnemigo() {
 
     let ataqueAleatorio = aleatorio(1, 3)
@@ -153,6 +175,9 @@ function combate(){
       revisarVidas()
 }
 
+/**
+ * Verifica que Jugador llega a 0
+ */
 function revisarVidas(){
     if (vidasEnemigo == 0){
 crearFinal(" Felicidades Ganaste Esta Ronda ")
@@ -161,7 +186,7 @@ crearFinal(" Perdiste Esta Ronda ")
     }
 }
 
-/***** todo el resultado en un solo bloque  **/
+/** todo el resultado en un solo bloque  */
 /**
 function crearMensaje(resultado) {
     let sectionMensajes = document.getElementById('mensajes')
@@ -171,9 +196,12 @@ function crearMensaje(resultado) {
     '</p> Resultado: <p id="nameAtaque"> '+ resultado +'</p>  </div>'
     sectionMensajes.appendChild(parrafo)
 }
-**/
+*/
 
-/** el resultado seccionado */
+/**
+ * 
+ * @param {String} resultado Obtiene si perdiste o ganaste 
+ */
 
 function crearMensaje(resultado){
     let sectionMensajes = document.getElementById('mensajes')
@@ -182,7 +210,9 @@ function crearMensaje(resultado){
     parrafo.innerHTML = resultado
     sectionMensajes.appendChild(parrafo)
 }
-
+/**
+ * Obtiene el ataque del jugador
+ */
 function crearMensajeAtaquesJugador(){
     let resultadoJugador = document.getElementById('resultado-jugador')
     let parrafo = document.createElement('div')
@@ -191,6 +221,9 @@ function crearMensajeAtaquesJugador(){
     resultadoJugador.appendChild(parrafo)
 }
 
+/**
+ * Obtiene el ataque del enemigo
+ */
 function crearMensajeAtaqueEnemigo(){
     let resultadoEnemigo = document.getElementById('resultado-enemigo')
     let parrafo = document.createElement('div')
@@ -199,6 +232,11 @@ function crearMensajeAtaqueEnemigo(){
    resultadoEnemigo.appendChild(parrafo)
 }
 
+/**
+ * Se deshabilita los botones de ataque al llegar un jugador a 0
+ * @param {String} resultadoFinal Muestras si pierdes o ganas
+ * Se ahbilitado el boton de reinicio
+ */
 function crearFinal(resultadoFinal) {
     let sectionMensajes = document.getElementById('mensajes')
 
