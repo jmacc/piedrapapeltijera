@@ -1,3 +1,4 @@
+//@ts-check
 /**
  * @autor jmacc <tianalytics.com.mx>
  */
@@ -35,10 +36,39 @@ const botonFuego = document.getElementById('boton-Fuego')
  * vidas  son llamadas por las funciones
  * @global {string} vidas de los jugadores
  */
+let Mokepones = []
 let ataqueJugador
 let ataqueEnemigo
 let vidasJugador = 3
 let vidasEnemigo = 3
+/**
+ * Clase para crear mokepon
+ */
+class Mokepon{
+    /** 
+     * @constructs 
+     * @param {string} nombre Nombre de la mascota
+     * @param {string} foto Url de la imagen
+     * @param {Number} vida Cantidad de vidas de la mascota
+    */
+    constructor(nombre, foto, vida){
+        /** @private */
+        this.nombre = nombre
+        this.foto = foto
+        this.vida = vida
+    }
+}
+
+let Hipoge = new Mokepon('Hipoge','img/Hipoge.png',5)
+let Capipepo = new Mokepon('Capipepo','img/Capipepo.png',5)
+let Ratigueya = new Mokepon('Ratigueya','img/Ratigueya.png',5)
+let Langostelvis = new Mokepon('Langostelvis','img/Langostelvis.png',5)
+let Tucapalma = new Mokepon('Tucapalma','img/Tucapalma.png',5)
+let Pydos =new Mokepon('Pydos','img/Pydos.png',5)
+
+//ingresamos valores al arreglo
+Mokepones.push(Hipoge,Capipepo,Ratigueya,Langostelvis,Tucapalma,Pydos)
+
 
 function iniciarJuego() {
     seccionSeleccionAtaque.style.display = 'none'
