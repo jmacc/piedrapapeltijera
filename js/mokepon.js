@@ -1,4 +1,3 @@
-//@ts-check
 /**
  * @autor jmacc <tianalytics.com.mx>
  */
@@ -34,11 +33,12 @@ const botonFuego = document.getElementById('boton-Fuego')
 
 /**
  * vidas  son llamadas por las funciones
- * @global {string} vidas de los jugadores
+ * @type {Array}  Mokepones.- Los moquepones
  */
 let Mokepones = []
 let ataqueJugador
 let ataqueEnemigo
+let opcionDeMokepones
 let vidasJugador = 3
 let vidasEnemigo = 3
 /**
@@ -50,12 +50,14 @@ class Mokepon{
      * @param {string} nombre Nombre de la mascota
      * @param {string} foto Url de la imagen
      * @param {Number} vida Cantidad de vidas de la mascota
+     * @type {Array} ataques
     */
     constructor(nombre, foto, vida){
         /** @private */
         this.nombre = nombre
         this.foto = foto
         this.vida = vida
+        this.ataques = []
     }
 }
 
@@ -66,13 +68,66 @@ let Langostelvis = new Mokepon('Langostelvis','img/Langostelvis.png',5)
 let Tucapalma = new Mokepon('Tucapalma','img/Tucapalma.png',5)
 let Pydos =new Mokepon('Pydos','img/Pydos.png',5)
 
-//ingresamos valores al arreglo
-Mokepones.push(Hipoge,Capipepo,Ratigueya,Langostelvis,Tucapalma,Pydos)
+//ingresamos valores de ataques al arreglo
 
+Hipoge.ataques.push(
+    {ataques: '🔥', id: 'boton-Fuego'},
+    {ataques: '💧', id: 'boton-Agua'},
+    {ataques: '🌱', id: 'boton-Tierra'},
+    {ataques: '💧', id: 'boton-Agua'},
+    {ataques: '💧', id: 'boton-Agua'},
+)
+
+Capipepo.ataques.push(
+    {ataques: '🔥', id: 'boton-Fuego'},
+    {ataques: '💧', id: 'boton-Agua'},
+    {ataques: '🌱', id: 'boton-Tierra'},
+    {ataques: '🔥', id: 'boton-Fuego'},
+    {ataques: '🔥', id: 'boton-Fuego'},
+)
+
+Ratigueya.ataques.push(
+    {ataques: '🌱', id: 'boton-Tierra'},
+    {ataques: '💧', id: 'boton-Agua'},
+    {ataques: '🌱', id: 'boton-Tierra'},
+    {ataques: '🌱', id: 'boton-Tierra'},
+    {ataques: '🔥', id: 'boton-Fuego'},
+)
+
+Langostelvis.ataques.push(
+    {ataques: '🔥', id: 'boton-Fuego'},
+    {ataques: '💧', id: 'boton-Agua'},
+    {ataques: '🌱', id: 'boton-Tierra'},
+    {ataques: '🌱', id: 'boton-Tierra'},
+    {ataques: '🌱', id: 'boton-Tierra'},
+)
+
+Tucapalma.ataques.push(
+    {ataques: '🔥', id: 'boton-Fuego'},
+    {ataques: '💧', id: 'boton-Agua'},
+    {ataques: '🌱', id: 'boton-Tierra'},
+    {ataques: '💧', id: 'boton-Agua'},
+    {ataques: '🔥', id: 'boton-Fuego'},
+)
+
+Pydos.ataques.push(
+    {ataques: '🔥', id: 'boton-Fuego'},
+    {ataques: '💧', id: 'boton-Agua'},
+    {ataques: '🔥', id: 'boton-Fuego'},
+    {ataques: '💧', id: 'boton-Agua'},
+    {ataques: '🌱', id: 'boton-Tierra'},
+)
+
+Mokepones.push(Hipoge,Capipepo,Ratigueya,Langostelvis,Tucapalma,Pydos)
 
 function iniciarJuego() {
     seccionSeleccionAtaque.style.display = 'none'
     seccionReinicionar.style.display = 'none'
+
+    Mokepones.forEach((Mokepon) => {
+       opcionDeMokepones = ''
+    } )
+
     botonMascotaJugador.addEventListener('click', seleccionarMascotaJugador)
     botonFuego.addEventListener('click', ataqueFuego)
     botonAgua.addEventListener('click', ataqueAgua)
